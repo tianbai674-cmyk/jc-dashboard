@@ -33,11 +33,13 @@ def _nav(active: str) -> str:
     today_cls = " class=\"on\"" if active == "today" else ""
     over_cls = " class=\"on\"" if active == "overview" else ""
     rev_cls = " class=\"on\"" if active == "review" else ""
+    foc_cls = " class=\"on\"" if active == "focus" else ""
     return (
         f"<style>{_CSS}</style>"
         f"<div id=\"{NAV_ID}\">"
         f"<a href=\"./index.html\"{today_cls}>今日看板</a>"
         f"<a href=\"./overview.html\"{over_cls}>综合仪表盘</a>"
+        f"<a href=\"./focus.html\"{foc_cls}>重点分析</a>"
         f"<a href=\"./review.html\"{rev_cls}>大复盘</a>"
         f"</div>"
     )
@@ -140,6 +142,22 @@ def build_review(src: str, dst: str) -> int:
     return len(html)
 
 
+def build_focus(src: str, dst: str) -> int:
+    """把 outputs/ 里最新的「重点分析」Markdown 渲染成 focus.html"""
+    import glob
+    cands = sorted(glob.glob(os.path.join(src, "重点分析_*.md")))
+    if not cands:
+        return 0
+    latest = cands[-1]
+    with open(latest, encoding="utf-8") as f:
+        md = f.read()
+    html = render_md(md, os.path.basename(latest)[:-3])
+    with open(os.path.join(dst, "focus.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"  {os.path.basename(latest)}  ->  focus.html  ({len(html)//1024} KB)")
+    return len(html)
+
+
 def main() -> int:
     src = sys.argv[1] if len(sys.argv) > 1 else "."
     dst = sys.argv[2] if len(sys.argv) > 2 else "."
@@ -147,6 +165,7 @@ def main() -> int:
     n1 = build(os.path.join(src, "dashboard.html"), os.path.join(dst, "index.html"), "today")
     n2 = build(os.path.join(src, "综合仪表盘.html"), os.path.join(dst, "overview.html"), "overview")
     build_review(src, dst)
+    build_focus(src, dst)
     if not n1:
         print("  [错误] 今日看板缺失，站点未生成")
         return 1
