@@ -25,7 +25,7 @@ detect_net() {
       echo "==> 网络：通过本机代理 $p"; return
     fi
   done
-  echo "无法连接 $API，请检查网络或本机代理。"; exit 1
+  echo "无法连接 ${API}，请检查网络或本机代理。"; exit 1
 }
 
 jget() { python3 -c "import json,sys; print(json.load(sys.stdin).get('$1',''))" 2>/dev/null || true; }
@@ -74,7 +74,7 @@ if [ -z "$TOKEN" ]; then
   mkdir -p "$(dirname "$TOKEN_FILE")"
   printf '%s' "$TOKEN" > "$TOKEN_FILE"
   chmod 600 "$TOKEN_FILE"
-  echo "    token 已缓存到 $TOKEN_FILE（仅供本机使用，不会进仓库）"
+  echo "    token 已缓存到 ${TOKEN_FILE}（仅供本机使用，不会进仓库）"
 fi
 
 auth=(-H "Authorization: Bearer $TOKEN"
