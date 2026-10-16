@@ -31,7 +31,7 @@ detect_net() {
       echo "==> 网络：通过本机代理 $p"; return
     fi
   done
-  echo "无法连接 $API，请检查网络。"; exit 1
+  echo "无法连接 ${API}，请检查网络。"; exit 1
 }
 
 jget() { python3 -c "import json,sys; print(json.load(sys.stdin).get('$1',''))" 2>/dev/null || true; }
