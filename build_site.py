@@ -72,7 +72,7 @@ def _inline(t: str) -> str:
     return t
 
 
-def render_md(md: str, title: str) -> str:
+def render_md(md: str, title: str, active: str = "review") -> str:
     """极简 Markdown → HTML（够用即可：标题/表格/引用/分隔线/粗体/列表）"""
     out, i = [], 0
     lines = md.split("\n")
@@ -122,7 +122,7 @@ def render_md(md: str, title: str) -> str:
     return (f"<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\">"
             f"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
             f"<title>{title}</title><style>{css}</style></head><body><div class=\"wrap\">"
-            + "\n".join(out) + "</div>" + _nav("review") + "</body></html>")
+            + "\n".join(out) + "</div>" + _nav(active) + "</body></html>")
 
 
 def build_review(src: str, dst: str) -> int:
@@ -135,7 +135,7 @@ def build_review(src: str, dst: str) -> int:
     latest = cands[-1]
     with open(latest, encoding="utf-8") as f:
         md = f.read()
-    html = render_md(md, os.path.basename(latest)[:-3])
+    html = render_md(md, os.path.basename(latest)[:-3], "review")
     with open(os.path.join(dst, "review.html"), "w", encoding="utf-8") as f:
         f.write(html)
     print(f"  {os.path.basename(latest)}  ->  review.html  ({len(html)//1024} KB)")
@@ -151,7 +151,7 @@ def build_focus(src: str, dst: str) -> int:
     latest = cands[-1]
     with open(latest, encoding="utf-8") as f:
         md = f.read()
-    html = render_md(md, os.path.basename(latest)[:-3])
+    html = render_md(md, os.path.basename(latest)[:-3], "focus")
     with open(os.path.join(dst, "focus.html"), "w", encoding="utf-8") as f:
         f.write(html)
     print(f"  {os.path.basename(latest)}  ->  focus.html  ({len(html)//1024} KB)")
