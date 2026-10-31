@@ -1,124 +1,69 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大复盘_2026-10-26</title><style>body{margin:0;padding:28px 18px 90px;background:#0e1420;color:#dbe4f0;font:15px/1.75 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}.wrap{max-width:900px;margin:0 auto}h1{font-size:24px;color:#6cb6ff;margin:.2em 0 .6em}h2{font-size:19px;color:#7ee0c0;margin:1.8em 0 .6em;border-left:4px solid #1f6feb;padding-left:10px}h3{font-size:16px;color:#ffd166;margin:1.4em 0 .4em}table{width:100%;border-collapse:collapse;margin:.8em 0;font-size:13.5px;display:block;overflow-x:auto}th,td{border:1px solid #23324a;padding:7px 9px;text-align:left;white-space:nowrap}th{background:#16233a;color:#9cc4ff}tr:nth-child(even) td{background:#121b2c}blockquote{margin:.8em 0;padding:.6em 1em;border-left:3px solid #5b7bb5;background:#131d30;color:#a9bcd8}code{background:#1b2740;padding:1px 5px;border-radius:4px;color:#ffd166;font-size:13px}b{color:#fff}hr{border:0;border-top:1px solid #23324a;margin:1.6em 0}li{margin-left:1.2em}a{color:#6cb6ff}</style></head><body><div class="wrap"><h1>2026-10-26 周一模型大复盘</h1>
-<h2>一、数据范围与限制</h2>
-<li>逐场预测记录：2026-09-25至2026-10-25，共378条，376场已有赛果。</li>
-<li>详情回测集：2026-08-24至2026-10-25，共464场，包含比分赔率与赛果。</li>
-<li>8月1日至8月23日的逐场预测详情已按“保留近30天”策略滚动清理，只剩复盘汇总快照，不能用于特征分层或参数联合寻优。</li>
-<li>因此本报告不把缺失的早期记录伪装成完整回测；所有参数调整均基于当前可追溯样本。</li>
-<li>从本次调整起，逐场预测详情保留期改为60天。</li>
-<h2>二、多窗口表现</h2>
-<table><thead><tr><th>窗口</th><th>场次</th><th>主推</th><th>常规方向</th><th>让球方向</th><th>大2.5</th></tr></thead><tbody>
-<tr><td>2026-09-25至10-25</td><td>376</td><td>226，60.1%</td><td>211，56.1%</td><td>183，48.7%</td><td>211，56.1%</td></tr>
-<tr><td>2026-10-12至10-25</td><td>217</td><td>122，56.2%</td><td>114，52.5%</td><td>109，50.2%</td><td>125，57.6%</td></tr>
-<tr><td>2026-10-20至10-25</td><td>100</td><td>54，54.0%</td><td>45，45.0%</td><td>51，51.0%</td><td>56，56.0%</td></tr>
-<tr><td>2026-10-23至10-25</td><td>64</td><td>38，59.4%</td><td>30，46.9%</td><td>38，59.4%</td><td>31，48.4%</td></tr>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>复盘_2026-10-30</title><style>body{margin:0;padding:28px 18px 90px;background:#0e1420;color:#dbe4f0;font:15px/1.75 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}.wrap{max-width:900px;margin:0 auto}h1{font-size:24px;color:#6cb6ff;margin:.2em 0 .6em}h2{font-size:19px;color:#7ee0c0;margin:1.8em 0 .6em;border-left:4px solid #1f6feb;padding-left:10px}h3{font-size:16px;color:#ffd166;margin:1.4em 0 .4em}table{width:100%;border-collapse:collapse;margin:.8em 0;font-size:13.5px;display:block;overflow-x:auto}th,td{border:1px solid #23324a;padding:7px 9px;text-align:left;white-space:nowrap}th{background:#16233a;color:#9cc4ff}tr:nth-child(even) td{background:#121b2c}blockquote{margin:.8em 0;padding:.6em 1em;border-left:3px solid #5b7bb5;background:#131d30;color:#a9bcd8}code{background:#1b2740;padding:1px 5px;border-radius:4px;color:#ffd166;font-size:13px}b{color:#fff}hr{border:0;border-top:1px solid #23324a;margin:1.6em 0}li{margin-left:1.2em}a{color:#6cb6ff}</style></head><body><div class="wrap"><h1>2026-10-30 竞彩复盘</h1>
+<h2>总体结果</h2>
+<table><thead><tr><th>指标</th><th>结果</th><th>等额 ROI</th></tr></thead><tbody>
+<tr><td>预测场次</td><td>12</td><td>—</td></tr>
+<tr><td>常规方向</td><td>5/12，41.7%</td><td>-26.9%</td></tr>
+<tr><td>让球方向</td><td>5/12，41.7%</td><td>-26.5%</td></tr>
+<tr><td>主推口径</td><td>5/12，41.7%</td><td>-41.8%</td></tr>
+<tr><td>比分主推</td><td>3/12，25.0%</td><td>—</td></tr>
+<tr><td>全部比分推荐覆盖</td><td>4/12，33.3%</td><td>-39.4%</td></tr>
+<tr><td>大2.5方向</td><td>6/12，50.0%</td><td>—</td></tr>
+<tr><td>高赔备选</td><td>1/11</td><td>—</td></tr>
 </tbody></table>
-<p>主推口径通过常规盘、让球盘与双平切换，30日整体高出原始常规方向4.0个百分点；但近7个比赛日原始常规方向只有45%，说明单一方向引擎仍不稳定。</p>
-<h2>三、档位表现</h2>
-<h3>历史留档（v7.10前）</h3>
-<table><thead><tr><th>档位</th><th>场次</th><th>命中</th></tr></thead><tbody>
-<tr><td>重点</td><td>10</td><td>7，70.0%</td></tr>
-<tr><td>推荐</td><td>163</td><td>106，65.0%</td></tr>
-<tr><td>观望</td><td>136</td><td>76，55.9%</td></tr>
-<tr><td>参考</td><td>67</td><td>37，55.2%</td></tr>
+<p>档位：重点 0 场，推荐 4/5，观望 0/3，参考 1/4。</p>
+<p>近 7 日：主推 55/100=55.0%，方向 52/100=52.0%，让球 53/100=53.0%，大小球 55/100=55.0%。</p>
+<p>自 2026-08-15 起累计：主推 249/423=58.9%，方向 237/423=56.0%，让球 205/423=48.5%，大小球 240/423=56.7%。</p>
+<h2>逐场结果</h2>
+<table><thead><tr><th>编号</th><th>比赛</th><th>赛果</th><th>常规判断</th><th>主推</th><th>让球</th><th>大小球</th><th>比分</th></tr></thead><tbody>
+<tr><td>001</td><td>布里斯班狮吼 vs 奥克兰FC</td><td>1-1</td><td>平局命中</td><td>主受让1球·让胜命中</td><td>让球胜命中</td><td>判大，未中</td><td>1-1命中</td></tr>
+<tr><td>002</td><td>科特布斯 vs 波鸿</td><td>1-2</td><td>客胜命中</td><td>主受让1球·让胜未中</td><td>实际让球平</td><td>大球命中</td><td>1-2命中</td></tr>
+<tr><td>003</td><td>尼斯 vs 雷恩</td><td>5-2</td><td>判客胜，未中</td><td>常规客胜未中</td><td>让球胜命中</td><td>大球命中</td><td>未覆盖</td></tr>
+<tr><td>004</td><td>勒阿弗尔 vs 巴黎圣日尔曼</td><td>1-5</td><td>客胜命中</td><td>常规客胜命中</td><td>让球负命中</td><td>大球命中</td><td>未覆盖</td></tr>
+<tr><td>005</td><td>博德闪耀 vs 维京</td><td>3-2</td><td>主胜命中</td><td>常规主胜命中</td><td>实际让球平</td><td>大球命中</td><td>高赔3-2命中</td></tr>
+<tr><td>006</td><td>福伦丹 vs 格拉夫夏普</td><td>1-2</td><td>判主胜，未中</td><td>主让1球·让负命中</td><td>让球负命中</td><td>大球命中</td><td>未覆盖</td></tr>
+<tr><td>007</td><td>埃尔沃斯堡 vs 美因茨</td><td>4-1</td><td>判客胜，未中</td><td>常规客胜未中</td><td>让球胜命中</td><td>大球命中</td><td>未覆盖</td></tr>
+<tr><td>008</td><td>谢菲尔德联 vs 雷克斯汉姆</td><td>1-0</td><td>判平，未中</td><td>常规平局未中</td><td>实际让球平</td><td>判大，未中</td><td>未覆盖</td></tr>
+<tr><td>009</td><td>比利亚雷亚尔 vs 西班牙人</td><td>0-1</td><td>判主胜，未中</td><td>常规主胜未中</td><td>让球胜未中</td><td>判大，未中</td><td>未覆盖</td></tr>
+<tr><td>010</td><td>里尔 vs 朗斯</td><td>1-0</td><td>判平，未中</td><td>常规平局未中</td><td>实际让球平</td><td>判大，未中</td><td>未覆盖</td></tr>
+<tr><td>011</td><td>卡萨皮亚 vs 里斯本</td><td>0-2</td><td>客胜命中</td><td>常规客胜命中</td><td>主受让2球·让球平</td><td>判大，未中</td><td>0-2命中</td></tr>
+<tr><td>012</td><td>科林蒂安 vs 米拉索尔</td><td>2-0</td><td>判平，未中</td><td>主让1球·让负未中</td><td>实际让球胜</td><td>判大，未中</td><td>未覆盖</td></tr>
 </tbody></table>
-<p>重点档样本少且与推荐档接近，推荐档持续混入“表面主胜、净胜球风险高”的冲突场次。</p>
-<h3>v7.10重跑（464场）</h3>
-<table><thead><tr><th>档位</th><th>场次</th><th>命中</th></tr></thead><tbody>
-<tr><td>重点</td><td>17</td><td>14，82.4%</td></tr>
-<tr><td>推荐</td><td>189</td><td>133，70.4%</td></tr>
-<tr><td>观望</td><td>172</td><td>97，56.4%</td></tr>
-<tr><td>参考</td><td>86</td><td>41，47.7%</td></tr>
-</tbody></table>
-<p>该组为464场统一重跑结果，重点、推荐、观望、参考的档位顺序正确。</p>
-<h2>四、模型与市场</h2>
-<table><thead><tr><th>市场</th><th>样本</th><th>模型命中</th><th>市场命中</th><th>模型Brier</th><th>市场Brier</th></tr></thead><tbody>
-<tr><td>常规盘</td><td>449</td><td>56.3%</td><td>58.6%</td><td>0.5427</td><td>0.5386</td></tr>
-<tr><td>让球盘</td><td>470</td><td>49.8%</td><td>51.9%</td><td>0.6227</td><td>0.6193</td></tr>
-</tbody></table>
-<p>模型仍低于市场约2个百分点，当前不应提高仓位；优化重点放在错误形态过滤和概率校准。</p>
-<h2>五、主要偏差</h2>
-<h3>1. 主胜与让球负冲突</h3>
-<p>376场中同时满足以下条件的比赛有115场：</p>
-<li>常规方向判主胜；</li>
-<li>竞彩让球为<code>-1</code>；</li>
-<li>纯模型让球方向判让球负。</li>
-<p>该组常规主胜仅47/115（40.9%），实际让球负68/115（59.1%）。因此不再只降档，而是在v7.10中自动把主推切换到历史胜率更高的一侧：让球负。</p>
-<p>464场重跑中，该冲突形态113场：常规主胜53场，让球负60场。自动切换后整体主推由283/464（61.0%）提高到285/464（61.4%）。提升幅度不大，但方向选择与历史优势侧一致，也不再让“主胜”标签掩盖净胜球风险。</p>
-<h3>2. 平局识别不足</h3>
-<p>376场中实际平局90场（23.9%），模型只主动判平23场（6.1%），平局召回7/90。</p>
-<p>对464场归档样本重跑：</p>
-<table><thead><tr><th>DRAW_IMP_THR</th><th>主动判平</th><th>占比</th><th>平局精确</th><th>主推命中</th><th>常规方向</th><th>方向ROI</th></tr></thead><tbody>
-<tr><td>0.34</td><td>37</td><td>8.0%</td><td>15/37，40.5%</td><td>61.0%</td><td>58.4%</td><td>-5.4%</td></tr>
-<tr><td>0.305</td><td>88</td><td>19.0%</td><td>30/88，34.1%</td><td>61.0%</td><td>57.3%</td><td>-4.2%</td></tr>
-</tbody></table>
-<p>阈值调至0.305后接近用户设定的20%判平目标，主推命中不变、方向ROI改善，已落地。</p>
-<h3>3. 大小球</h3>
-<li>30日大小球命中211/376，56.1%。</li>
-<li>近14日125/217，57.6%。</li>
-<li>近7个比赛日56/100，56.0%。</li>
-<li>最近3日31/64，48.4%，主要受10月24日、25日连续大球未打出影响。</li>
-<li>模型平均大球倾向约94%，存在明显方向分布偏斜；但当前命中率仍高于随机基线，暂不改主阈值。</li>
-<p>待办：建立60%-70%概率区间的分段校准，并保留盘口方向条件，不在本次直接调整。</p>
-<h2>六、比分与高赔结构</h2>
-<h3>总体</h3>
-<li>30日比分主推98/376，26.1%。</li>
-<li>主推+高赔覆盖116/376，30.9%。</li>
-<li>464场重跑：主推31.9%，全部推荐覆盖37.1%。</li>
-<table><thead><tr><th>结构</th><th>场次</th><th>主推命中</th><th>全部推荐覆盖</th></tr></thead><tbody>
-<tr><td>3主推+1备选</td><td>388</td><td>127，32.7%</td><td>144，37.1%</td></tr>
-<tr><td>3主推无备选</td><td>26</td><td>10，38.5%</td><td>10，38.5%</td></tr>
-<tr><td>2主推+2备选</td><td>50</td><td>9，18.0%</td><td>16，32.0%</td></tr>
-</tbody></table>
-<h3>高赔备选</h3>
-<li>30日累计18/624，命中2.9%，ROI -50.0%。</li>
-<li>近一周3/123，ROI -59%。</li>
-<li>分比分看：3:2为6/189、ROI-37.0%；4:1为6/173、ROI-46.5%；1:4为1/110、ROI-88.2%。</li>
-<p>高赔池整体仍为负收益，尤其1:4应停止无条件下放。不得继续增大冷门投入。</p>
-<h3>4-0漏选</h3>
-<p>留存窗口实际出现9次4-0，主推与高赔均未覆盖。初步条件<code>主胜+主队预期进球≥1.8+客队预期进球≤0.8</code>在30场中覆盖4次4-0，但样本少且收益高度依赖少数高赔，暂不直接上线，先做滚动验证。</p>
-<h2>七、双平与平局</h2>
-<p>464场回测中：</p>
-<li><code>draw_tilt≥3</code>共53场，平局或让球平命中35/53（66.0%），组合ROI+9.4%；</li>
-<li>扩展到<code>draw_tilt≥2</code>共110场，命中66/110（60.0%），组合ROI+3.7%；</li>
-<li>叠加原有EV>0触发后，最终双平覆盖池124场，命中71/124（57.3%），组合ROI约0%；</li>
-<li>直接全推让球平仍不成立。</li>
-<p>结论：v7.10将正式双平提示从<code>tilt≥3</code>扩展到<code>tilt≥2</code>，覆盖接近翻倍，同时保留正收益；不扩大到全部平局候选。</p>
-<h2>八、联赛与盘口</h2>
-<h3>近30日</h3>
-<table><thead><tr><th>联赛</th><th>场次</th><th>主推命中</th></tr></thead><tbody>
-<tr><td>英超</td><td>27</td><td>63.0%</td></tr>
-<tr><td>西甲</td><td>29</td><td>65.5%</td></tr>
-<tr><td>意甲</td><td>30</td><td>56.7%</td></tr>
-<tr><td>德甲</td><td>27</td><td>51.9%</td></tr>
-<tr><td>欧罗巴</td><td>20</td><td>50.0%</td></tr>
-<tr><td>巴甲</td><td>16</td><td>50.0%</td></tr>
-<tr><td>美职</td><td>12</td><td>41.7%</td></tr>
-<tr><td>挪超</td><td>8</td><td>25.0%</td></tr>
-</tbody></table>
-<h3>近一周</h3>
-<li>欧罗巴4/10，40.0%；</li>
-<li>德甲4/9，44.4%；</li>
-<li>欧冠10/17，58.8%；</li>
-<li>意甲6/10，60.0%；</li>
-<li>西甲6/10，60.0%。</li>
-<p>联赛小样本波动明显，不按单周结果直接修改联赛参数；优先保留已成熟的五大联赛结构。</p>
-<h2>九、本次落地</h2>
-<h3>已落地</h3>
-<p>1. <code>v7.10</code>：常规主胜+主让1球+纯模型让球负 → 自动切换让球负为主推。</p>
-<p>2. <code>DRAW_IMP_THR</code>：0.34→0.305，将主动判平提升到约19%。</p>
-<p>3. 双平正式触发：<code>draw_tilt</code>门槛由3降至2，并保留原有EV>0触发；覆盖110场，命中60.0%、ROI+3.7%。</p>
-<p>4. 逐场预测详情留档由30天扩展至60天。</p>
-<p>5. <code>weekly_review.py</code>统一使用线上<code>combo_score</code>和primary口径。</p>
-<p>6. 修正竞彩与亚盘让球线“深浅”方向描述。</p>
-<h3>暂不落地</h3>
-<p>1. 不因近一周波动直接修改联赛λ或主场优势参数。</p>
-<p>2. 不直接修改五大联赛λ、主场优势或联赛倍率。</p>
-<p>3. 不剔除4-1或3-2，也不直接用4-0替换。</p>
-<p>4. 不扩大高赔备选投入。</p>
-<p>5. 不启用全局让球平argmax。</p>
-<h2>十、下阶段验证</h2>
-<li>新平局阈值在实盘需维持18%-22%的判平占比，并跟踪平局精确率。</li>
-<li>冲突形态切换后累计新增≥50场，复核让球负主推的真实收益和回撤。</li>
-<li>高赔池重点观察条件化4-0，以及1:4的剔除效果。</li>
-<li>大小球按概率区间校准，不用单日结果全局降λ。</li>
-<li>60天留档满窗口后，重跑当前464场参数和联赛分层，替代短期回测。</li></div><style>#jcsite-nav{position:fixed;right:14px;bottom:14px;z-index:2147483647;display:flex;gap:8px;font:600 13px/1.2 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}#jcsite-nav a{display:block;padding:9px 14px;border-radius:999px;text-decoration:none;color:#fff;background:rgba(20,26,40,.82);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(0,0,0,.28)}#jcsite-nav a.on{background:linear-gradient(135deg,#1f6feb,#0ea5e9);border-color:rgba(255,255,255,.35)}@media (max-width:520px){#jcsite-nav{right:8px;bottom:8px;gap:6px}#jcsite-nav a{padding:8px 11px;font-size:12px}}</style><div id="jcsite-nav"><a href="./index.html">今日看板</a><a href="./overview.html">综合仪表盘</a><a href="./focus.html">重点分析</a><a href="./review.html" class="on">大复盘</a></div></body></html>
+<p>让球结果按“主队净胜球 + 竞彩让球数”计算；竞彩让球胜平负是三选一玩法，与亚洲让球走盘退款口径不同。</p>
+<h2>关键结论</h2>
+<h3>1. 推荐档有效，观望档也发挥了过滤作用</h3>
+<p>推荐档仅错 009 比利亚雷亚尔一场，主推 4/5；观望档 002、007、012 主推全部未中，说明低信心场次没有被错误升档。</p>
+<p>尤其 003 尼斯、007 埃尔沃斯堡、009 比利亚雷亚尔三场热门方向失手，但前两场只处于参考/观望档，没有把高方差扩散到核心推荐层。这是当天最重要的风控正反馈。</p>
+<h3>2. 深盘热门两场一命中、一让球平</h3>
+<p>004 巴黎客场 1-5，常规客胜与“巴黎让2球负”均命中；011 里斯本客场 0-2，常规客胜和 0-2 比分命中，但竞彩主受让2球最终为让球平。</p>
+<p>两场样本不足以证明“不追深让球”应被推翻。该规则仍应保留：方向先取强队，深盘只按赔率价值和比赛结构单独判断。</p>
+<h3>3. 冲突切换净效果为 2/4</h3>
+<p>四场主推切到让球盘：</p>
+<li>001 布里斯班受让1球·让胜命中；</li>
+<li>002 科特布斯受让1球·让胜未中，实际让球平；</li>
+<li>006 福伦丹主让1球·让负命中；</li>
+<li>012 科林蒂安主让1球·让负未中，实际主队 2-0。</li>
+<p>净效果 2/4，不足以回退 v7.10 切换规则。002、008、010、011 都落在让球平附近，说明“恰好一球差”仍是让球盘的主要结构性成本。</p>
+<h3>4. 单日平局判断偏差明显，但不做参数调整</h3>
+<p>模型当天判平 4 场，仅 001 命中；实际只有 001 一场平局。008、010 都是主队 1-0 小胜，012 是主队 2-0。</p>
+<p>但把视角拉长，近 7 日实际平局 26/100，模型判平 12/100、命中 5 场；自 8/15 起实际平局 100/423，模型判平 32/423、仅命中 10 场。当前问题仍是“平局选择精度不足”，不是简单的平局权重过低。不能因为本日 3 场平局错判就直接上调平局概率。</p>
+<h3>5. 大小球全部判大，实际正好 50%</h3>
+<p>12 场全部给出大 2.5，实际大球 6/12。当天共 38 球，场均 3.17 球，但模型平均大2.5概率约 60.4%、平均预期总进球 3.03，结果低于概率暗示。</p>
+<p>近 7 日大小球仍为 55.0%，累计 56.7%，没有形成多日系统性偏置；本日保留观察，不改 λ 或大小球阈值。</p>
+<h3>6. 比分与高赔表现接近历史常态</h3>
+<p>主推比分 3/12=25.0%，与比分模型长期主推命中约 27% 接近；全部推荐覆盖 4/12=33.3%。</p>
+<p>唯一高赔命中是 005 博德闪耀 3-2 维京，备选 3-2 赔率 12.5。高赔备选 1/11，仍属于低概率补充，不应提高固定投入。</p>
+<h3>7. 六层数据完整的首个完整样本</h3>
+<p>本销售日竞彩官方、FotMob、titan007 分析、Sofascore、亚盘和真实大小球均为 12/12 覆盖，并有两份盘口快照。复盘未发现数据缺失导致的误判。</p>
+<h2>处理决定</h2>
+<li>不修改概率参数、联赛权重和平局阈值。</li>
+<li>保留 v7.10 冲突切换规则，但继续限制让球主推仓位。</li>
+<li>“深盘强队不追让球”继续保留；004 命中与 011 让球平属于 2 场小样本，不作规则反转。</li>
+<li>高赔备选维持低仓位。</li>
+<li>将“让球恰好一球差”和“单日判平精度”列为后续专项观察项，等待更多比赛日样本。</li>
+<li>更新复盘仪表盘；本次只发布赛果与统计，不触发模型优化。</li>
+<h2>数据口径</h2>
+<li>销售日：2026-10-30，共 12 场。</li>
+<li>比赛时间：2026-10-30 17:00 至 2026-10-31 07:00（北京时间）。</li>
+<li>赛果来源：竞彩官方开奖页。</li>
+<li>杯赛及联赛统一按竞彩 90 分钟胜平负、让球胜平负结算。</li>
+<li>大小球按全场总进球是否大于 2.5 计算。</li></div><style>#jcsite-nav{position:fixed;right:14px;bottom:14px;z-index:2147483647;display:flex;gap:8px;font:600 13px/1.2 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}#jcsite-nav a{display:block;padding:9px 14px;border-radius:999px;text-decoration:none;color:#fff;background:rgba(20,26,40,.82);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(0,0,0,.28)}#jcsite-nav a.on{background:linear-gradient(135deg,#1f6feb,#0ea5e9);border-color:rgba(255,255,255,.35)}@media (max-width:520px){#jcsite-nav{right:8px;bottom:8px;gap:6px}#jcsite-nav a{padding:8px 11px;font-size:12px}}</style><div id="jcsite-nav"><a href="./index.html">今日看板</a><a href="./overview.html">综合仪表盘</a><a href="./focus.html">重点分析</a><a href="./review.html" class="on">复盘</a></div></body></html>
